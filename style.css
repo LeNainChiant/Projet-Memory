@@ -1,0 +1,19 @@
+main{
+    background-color: aquamarine;
+}
+
+#login{
+    color: chartreuse;
+}
+#signin{
+    color: yellowgreen;
+}
+
+#pwdRules{
+    display: block;
+    text-align: left;
+    padding: 1px color black;
+}
+#userEmail{
+    text-align: justify;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+
+
+    <title>Document</title>
+</head>
+<body id="inscription">
+    <fieldset>
+        <legend>Inscription</legend>
+        <form action="" method="post"> <br>
+            <input type="text" id="userID" 
+                name="userName" 
+                autofocus 
+                required 
+                placeholder="Insérez un ID"
+                pattern="(?=.\*[a-z])(?=.\*[A-Z]).{1}"> <p>Entre 3 et 10 caractères, lettres minuscules et majuscules.</p><br>
+            <input type="email" id="userEmail" name="user.mail" required placeholder="Adresse courriel"> <p>Entrez une adresse courriel valide</p>
+            <input type="password" id="newUserPwd"
+                placeholder="Mot de passe"
+                required
+                name="pwd" 
+                id="userPwd" 
+                pattern="(?=.\*d)(?=.\*[a-z])(?=.\*[A-Z]).{}" 
+                title="Entrez un mot de passe de six caractères ou plus devant comporter une lettre minuscule, une majuscule, un chiffre et un symbole."> <p>Mot de passe de 6 caractères ou plus.</p>
+            
+            <div id="pwdRules">
+            <div id="passLength"> Six lettres minimum.</div>
+            <div id="lowerCase">Doit comporter une lettre minuscule</div>
+            <div id="upperCase">Doit comporter une lettre majuscule</div>
+            <div id="num">Doit comporter un chiffre</div>
+            <div id="symbole"> Doit comporter un symbole</div>
+            </div>
+      
+            <button id="submit">S'inscrire</button>
+            <button id ="clear">Annuler</button>
+        </form>
+    </fieldset>
+
+
+</body>
+</html>

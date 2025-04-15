@@ -3,35 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENI Memory</title>
+
+    <link rel="stylesheet" href="style.css">
     <script defer src="jquery.js"></script>
     <script defer src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-
-
-
-    <title>Présentation du jeu.</title>
 </head>
 <body>
 
-    <h1>Memory</h1>    
+    <nav id="menu">
+        <a href="index.html" id="Accueil">Accueil </a>
+        <a href="inscription.html" id="Inscription"> Inscription</a>
+        <a href="connexion.html">Connexion </a>
 
-    <div id="intro"> <h3> Principe de base</h3>
-        <section id="recap"> Le principe fondamental est le suivant : <br>
-        - retourner deux cartes face visible vers le haut <br>
-        - obtenir le plus grand nombre de paires. <br>
-            <br>
-        Le joueur ayant le plus grand nombre de paires gagne la partie.     
-        </section>
-
-
-        <button id="login">Connexion</button>
-        <button id="createAccount">Inscription</button>
-    </div>
+    </nav>
+    <main>
+    <section id="rappel" >
+        <h1>ENI Memory</h1>
 
 
+        <h2>Rappel des règles : </h2>
 
+        Retirer toutes les cartes du plateau en faisant le plus de paires possibles. <br>
+        Le joueur ayant le plus de paires une fois toutes les cartes retirées gagne la partie.
 
-
-
+    </section>
+        <button id="login"> Déjà inscrit?</button>
+    
+        <button id="signin">Nouveau joueur?</button>
+    </main>
 </body>
+
+
 </html>
