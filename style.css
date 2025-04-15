@@ -1,14 +1,49 @@
-main{
-    background-color: aquamarine;
+body{
+    display: flex;
+    max-width: 900px;
+    max-height: 400px;
 }
 
+main{
+    display: inline-block;
+    background-color: rgb(73, 108, 97);
+    max-width: 1500px;
+    max-height: 1500px; 
+    border-radius: 50%;
+}
+
+nav{
+    text-align: center;
+    border: 50px;
+    background-color: pink;
+    
+}
+
+.button{
+
+    display: flex;
+
+    text-align: justify;
+    margin: 50px;
+    border-color: black ;
+}
+
+
+#rappel{
+    text-align: center;
+}
 #login{
-    color: chartreuse;
+    color: rgb(82, 163, 2);
 }
 #signin{
-    color: yellowgreen;
+    color: rgb(255, 0, 0);
 }
 
+
+
+
+
+/* Inscription */
 #pwdRules{
     display: block;
     text-align: left;
