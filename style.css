@@ -1,18 +1,28 @@
 body{
-    display: flex;
     max-width: 900px;
     max-height: 400px;
+    
+
+}
+
+.degradediagonal{
+    background: linear-gradient(to bottom right, rgb(113, 208, 113), rgb(61, 189, 215) ) no-repeat;
+    
 }
 
 main{
-    display: inline-block;
-    background-color: rgb(73, 108, 97);
-    max-width: 1500px;
-    max-height: 1500px; 
-    border-radius: 50%;
+    color: aliceblue;
+    background-color: black;
+    max-width: fit-content;
+    max-height: fit-content; 
+    border-color: white;
+    border : 1px;
+    
 }
 
 nav{
+
+    width:  fit-content;
     text-align: center;
     border: 50px;
     background-color: pink;
@@ -20,11 +30,9 @@ nav{
 }
 
 .button{
-
-    display: flex;
-
+    align-content: center;
     text-align: justify;
-    margin: 50px;
+    margin: 10px;
     border-color: black ;
 }
 
