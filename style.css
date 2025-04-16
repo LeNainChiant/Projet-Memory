@@ -23,6 +23,7 @@ main{
     border-color:slategray   ;
     border :solid 1px;
     padding: 25px;
+    text-align: left;
     
 }
 
@@ -34,13 +35,13 @@ nav{
     border: 50px;
     background-color: black;
     text-align: center;
+    margin: 30px;
 
     
 }
 :link{
     color:aqua
 }
-
 
 .accueil-regles{
     display: flex;

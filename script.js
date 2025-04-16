@@ -7,7 +7,12 @@ document.querySelector('#login').addEventListener('click', function(){
 
 // lien vers le formulaire d'inscription pour un nouveau joueur
 document.querySelector('#signin').addEventListener('click', function(){
-    window.location.href="inscription.html"
+    window.location.href="inscription.html";
+})
+
+//lien vers le choix de partie depuis le profil
+document.querySelector("#gameLaunch").addEventListener('click', function(){
+  window.location.href="jeu.html";
 })
 
 
