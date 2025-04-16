@@ -75,11 +75,11 @@ nav{
 
 /* Inscription */
 #pwdRules{
-    display: block;
-    text-align: left;
+    display: flex;
     padding: 1px color black;
     max-width: 75%;
     max-height: 90%;
+    flex-direction: column
 
 
 }
@@ -92,7 +92,9 @@ nav{
 }
 
 
-
+#newUserPwd{
+    flex-direction: row;
+}
 
 /* Connexion */
 
