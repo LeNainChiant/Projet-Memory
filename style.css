@@ -1,3 +1,6 @@
+
+/* CSS BODY/Main*/
+
 a:visited{
     color: white;
 }
@@ -68,7 +71,28 @@ nav{
     display: block;
     text-align: left;
     padding: 1px color black;
+    max-width: 75%;
+    max-height: 90%;
+
+
 }
 #userEmail{
     text-align: justify;
+}
+#submit,
+#clear{
+    margin: 10px;
+}
+
+
+
+
+/* Connexion */
+
+/* Profil */ 
+
+#infosProfil{
+    display: block;
+
+
 }
