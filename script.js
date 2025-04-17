@@ -1,27 +1,9 @@
-// lien vers le formulaire de connexion au clic sur le bouton "login"
+ // fonctions de test du mot de passe
+ // 0 : récupération de l'input newUserPwd
+const userPwd = document.querySelector('#newUserPwd').value
+console.log(userPwd.value)
 
-document.querySelector('#login').addEventListener('click', function(){
-  // ID, mdp  lien vers la page de connexion
-    window.location.href = "connexion.html";
-})
-
-// lien vers le formulaire d'inscription pour un nouveau joueur
-document.querySelector('#signin').addEventListener('click', function(){
-    window.location.href="inscription.html";
-})
-
-//lien vers le choix de partie depuis le profil
-document.querySelector("#gameLaunch").addEventListener('click', function(){
-  window.location.href="jeu.html";
-})
-
-
-// fonctions de test du mot de passe
-// 0 récupération de l'input newUserPwd
-let userPwd = document.querySelector('#newUserPwd').value 
-
-
-// 0.1 fonction de colorisation/validation des chaînes de caractère
+// 0.1 : fonction de colorisation/validation des chaînes de caractère
 function colorTxtGrn(id){
   document.querySelector(id).style.color="green" /*validation correcte */
 }
@@ -50,6 +32,7 @@ function checkPwdNumber(userPwd){
   colorTxtRed('#num')
   }
   return ok
+  
 }
 
 // 3 : test lettre minuscule
@@ -75,12 +58,20 @@ function checkUpperCase(){
   }
 }
 
-
-
-
-
+// 5 test des symboles
+function checkSymbol(userPwd) {
+   let ok = /[^a-zA-Z0-9]/.test(userPwd);
+   if (ok){
+    colorTxtGrn('#symbole')
+   }
+   else{
+    colorTxtRed('#symbole')
+   }
+}
 // 6 : contrôle de toutes les variables et validation du mot de passe
 
 let length = checkPwdLength(userPwd)
 let pwdNum= checkPwdNumber(userPwd)
-let pwdLowerCase = checkLowerCase(userPwd)
+let pwdLower = checkLowerCase(userPwd)
+let pwdUpper = checkUpperCase(userPwd)
+let symbol = checkSymbol(userPwd)

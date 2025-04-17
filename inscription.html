@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="style.css">
     <script defer src="jquery.js"></script>
-    <script   src="script.js"></script>
+    <script defer src="script.js"></script>
 
 
     <title>Inscription</title>
@@ -36,8 +36,7 @@
                         placeholder="Mot de passe"
                         required
                         name="pwd" 
-                        id="userPwd" 
-                        pattern="(?=.\*d)(?=.\*[a-z])(?=.\*[A-Z]).{}" 
+                        pattern="(?=.\*d)(?=.\*[a-z])(?=.\*[A-Z]).{6}" 
                         title="Entrez un mot de passe de six caractères ou plus devant comporter une lettre minuscule, une majuscule, un chiffre et un symbole."> <p>Mot de passe de 6 caractères ou plus.</p>
                     
                     <div id="pwdRules">
