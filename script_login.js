@@ -12,3 +12,6 @@ document.querySelector('#login').addEventListener('click', function(){
   document.querySelector("#gameLaunch").addEventListener('click', function(){
     window.location.href="jeu.html";
   })
+
+
+  fetch("localStorage")

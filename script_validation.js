@@ -125,3 +125,14 @@ function checkIDUpperCase(userID){
     colorTxtRed('#userIDUpperCase')
   }
 }
+// Sauvegarde des données et renvoi vers la page de connexion.
+
+document.querySelector("#submit").addEventListener('click', function(){
+const email = document.querySelector("#userMail").value
+  localStorage.setItem("Joueur", email)
+})
+// Renvoi vers la page de connexion une fois inscrit
+document.querySelector('#login').addEventListener('click', function(){
+  // ID, mdp  lien vers la page de connexion
+    window.location.href = "connexion.html";
+})
