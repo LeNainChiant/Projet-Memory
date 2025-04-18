@@ -1,15 +1,17 @@
- // fonctions de test du mot de passe
- // 0 : récupération de l'input newUserPwd
-const userPwd = document.querySelector('#newUserPwd').value
-console.log(userPwd.value)
+ //fonctions de test du mot de passe
+// 0 : récupération de l'input newUserPwd
+const userPwd = document.querySelector('#newUserPwd')
+userPwd.addEventListener("change", checkPwd)
 
-// 0.1 : fonction de colorisation/validation des chaînes de caractère
-function colorTxtGrn(id){
-  document.querySelector(id).style.color="green" /*validation correcte */
+function checkPwd(){
+  let length = checkPwdLength(userPwd.value) 
+  let pwdNum= checkPwdNumber(userPwd.value)
+  let pwdLower = checkLowerCase(userPwd.value)
+  let pwdUpper = checkUpperCase(userPwd.value)
+  let symbol = checkSymbol(userPwd.value)
 }
-function colorTxtRed(id){
-  document.querySelector(id).style.color="red" /*validation incorrecte*/
-}
+
+
 // 1 : test longueur
 function checkPwdLength(userPwd) {
   let ok = userPwd.length >=6
@@ -29,10 +31,9 @@ function checkPwdNumber(userPwd){
     colorTxtGrn('#num')
   }
   else{ 
-  colorTxtRed('#num')
+    colorTxtRed('#num')
   }
   return ok
-  
 }
 
 // 3 : test lettre minuscule
@@ -48,7 +49,7 @@ function checkLowerCase(userPwd){
 }
 
 // 4 : test lettre majuscule
-function checkUpperCase(){
+function checkUpperCase(userPwd){
   let ok = /[A-Z]+/.test(userPwd)
   if (ok){
     colorTxtGrn('#upperCase')
@@ -60,7 +61,7 @@ function checkUpperCase(){
 
 // 5 test des symboles
 function checkSymbol(userPwd) {
-   let ok = /[^a-zA-Z0-9]/.test(userPwd);
+   let ok = /[^a-zA-Z0-9]+/.test(userPwd);
    if (ok){
     colorTxtGrn('#symbole')
    }
@@ -68,10 +69,59 @@ function checkSymbol(userPwd) {
     colorTxtRed('#symbole')
    }
 }
-// 6 : contrôle de toutes les variables et validation du mot de passe
 
-let length = checkPwdLength(userPwd)
-let pwdNum= checkPwdNumber(userPwd)
-let pwdLower = checkLowerCase(userPwd)
-let pwdUpper = checkUpperCase(userPwd)
-let symbol = checkSymbol(userPwd)
+
+// 0.1 : fonction de colorisation/validation des chaînes de caractère
+function colorTxtGrn(id){
+  document.querySelector(id).style.color="green" /*validation correcte */
+}
+function colorTxtRed(id){
+  document.querySelector(id).style.color="red" /*validation incorrecte*/
+}
+
+// // Analyse de l'ID
+
+const userID= document.querySelector('#userID')
+userID.addEventListener("change", checkID)
+
+function checkID(){
+  let idLength=checkIDLength(userID.value)
+  let idLower = checkIDLowerCase(userID.value)
+  let idUpper = checkIDUpperCase(userID.value)
+}
+// Check longueur ID
+
+function checkIDLength(userID) {
+  let ok = userID.length >=3
+  if (ok){
+    colorTxtGrn('#userIDLength')
+  }
+  else {
+    colorTxtRed('#userIDLength')
+  }  
+  return ok
+}
+
+// Check lowerCase ID
+function checkIDLowerCase(userID){
+  let ok = /[a-z]+/.test(userID)
+  if(ok){
+    colorTxtGrn('#userIDLowerCase')
+  }
+  else {
+    colorTxtRed('#userIDLowerCase')
+  }
+  return ok
+}
+
+// Check upperCase ID
+
+function checkIDUpperCase(userID){
+  let ok = /[A-Z]+/.test(userID)
+  if (ok){
+    colorTxtGrn('#userIDUpperCase')
+  }
+  else{
+    colorTxtRed('#userIDUpperCase')
+  }
+}

@@ -28,19 +28,36 @@
                     <input type="text" id="userID" 
                         name="userName" 
                         autofocus 
-                        required 
-                        placeholder="Insérez un ID"
-                        pattern="(?=.\*[a-z])(?=.\*[A-Z]).{5}"> <p>Entre 3 et 10 caractères, lettres minuscules et majuscules.</p>
-                    <input type="email" id="userEmail" name="user.mail" required placeholder="Adresse courriel"> <p>Entrez une adresse courriel valide</p>
+                        required
+                        pattern="(?=.\*[a-z])(?=.\*[A-Z]).{3}"  
+                        placeholder="Insérez un ID">
+                    
+                    <div id="idRules">
+                        <div id="userIDLength" >Trois caractères minimum</div>
+                        <div id="userIDLowerCase">Une lettre minuscule</div>
+                        <div id="userIDUpperCase">Une lettre majuscule</div>
+                    </div>
+                        
+                    
+                            <br>
+                            <br>      
+                           <input type="email" 
+                           id="userEmail" 
+                           name="user.mail" 
+                           required 
+                           placeholder="Entrez une adresse courriel valide"> 
+
+                           <br>
+                           <br>
                     <input type="password" id="newUserPwd"
                         placeholder="Mot de passe"
                         required
                         name="pwd" 
                         pattern="(?=.\*d)(?=.\*[a-z])(?=.\*[A-Z]).{6}" 
-                        title="Entrez un mot de passe de six caractères ou plus devant comporter une lettre minuscule, une majuscule, un chiffre et un symbole."> <p>Mot de passe de 6 caractères ou plus.</p>
+                        title="Entrez un mot de passe de six caractères ou plus devant comporter une lettre minuscule, une majuscule, un chiffre et un symbole.">
                     
                     <div id="pwdRules">
-                        <div id="passLength"> Six lettres minimum.</div>
+                        <div id="passLength"> Six caractères minimum.</div>
                         <div id="lowerCase">Doit comporter une lettre minuscule</div>
                         <div id="upperCase">Doit comporter une lettre majuscule</div>
                         <div id="num">Doit comporter un chiffre</div>
